@@ -16,6 +16,9 @@
         <a class="nav-link text-white" href="{{url('/buletin')}}"> Buletin<span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
+        <a class="nav-link text-white" href="{{url('/pengurus')}}">Pengurus</a>
+      </li>
+      <li class="nav-item">
         <a class="nav-link text-white" href="{{url('/volunteer')}}">Volunteer</a>
       </li>
       <li class="nav-item">

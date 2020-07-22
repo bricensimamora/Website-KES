@@ -14,6 +14,8 @@ class TeacherController extends Controller
      */
     public function index()
     {
+        $pengajar = Teacher::all();
+        return view('istanaPintar', ['pengajar' => $pengajar]);
         //
     }
 

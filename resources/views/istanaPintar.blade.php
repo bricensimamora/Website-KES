@@ -8,40 +8,88 @@
         Program belajar tambahan gratis bagi pelajar Sekolah Dasar (SD) di Kecamatan Parbuluan.
       </p>
       <br>
-      <div class="container-fluid p-0">
-        <div class="row no-gutters">
-          <div class="col-lg-6 order-lg-2 text-white showcase-img"
-            style="background-image: src='public/foto2.jpg'"></div>
-              <div class="col-lg-6 order-lg-1 my-auto showcase-text">
-                <h2>Tim Pengajar</h2>
-                  <p class="lead mb-0">When you use a theme created by Start Bootstrap, you know that the theme will
-                  look great on any device, whether it's a phone, tablet, or desktop the page will behave
-                  responsively!</p>
-              </div>
-          </div>
-      </div>
-       
-            <div class="row no-gutters">
-                <div class="col-lg-6 text-white showcase-img" style="background-image: url('img/bg-showcase-2.jpg');">
-                </div>
-                <div class="col-lg-6 my-auto showcase-text">
-                    <h2>Updated For Bootstrap 4</h2>
-                    <p class="lead mb-0">Newly improved, and full of great utility classes, Bootstrap 4 is leading the
-                        way in mobile responsive web development! All of the themes on Start Bootstrap are now using
-                        Bootstrap 4!</p>
-                </div>
-            </div>
-            <div class="row no-gutters">
-                <div class="col-lg-6 order-lg-2 text-white showcase-img"
-                    style="background-image: url('img/bg-showcase-3.jpg');"></div>
-                <div class="col-lg-6 order-lg-1 my-auto showcase-text">
-                    <h2>Easy to Use &amp; Customize</h2>
-                    <p class="lead mb-0">Landing Page is just HTML and CSS with a splash of SCSS for users who demand
-                        some deeper customization options. Out of the box, just add your content and images, and your
-                        new landing page will be ready to go!</p>
+      <h2><br></h2>
+      <div class="container">
+        <div class="mt-3">
+            <div class="row">
+                <div class="col">
+                  <h1>Pengajar KES</h1>
+                  <div class="mt-3">
+                    <table class="table">
+                    <thead>
+                        <tr>
+                        <th scope="col">No</th>
+                        <th scope="col">Nama</th>
+                        <th scope="col">Alamat</th>
+                        <th scope="col">Tanggal lahir</th>
+                        <th scope="col">Pekerjaan</th>
+                        <th scope="col">Kesan</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    <?php $k = 1;?>
+                    @foreach($pengajar as $i)
+                      <tr>
+                      <th scope="row"> <?= $k++; ?></th>
+                      <td> {{$i->nama}}</td>
+                      <td>{{$i->alamat}}</td>
+                      <td> {{$i->tanggalLahir}}</td>
+                      <td>{{$i->pekerjaan}}</td>
+                      <td> {{$i->kesan}}</td>
+                      <td>
+                      <div class="btn-group btn-group-justified">
+                          <a type="button" href="#" class="btn btn-outline-primary btn-block">Lihat</a>
+                      </td>
+                      </tr>
+                    @endforeach
+                </tbody>
+                </table>
+                <a href="#" class="btn btn-primary mt-3" style="justify-content: center ;" >Tambah Pengajar</a>
                 </div>
             </div>
         </div>
+        <h2><br></h2>
+        <div class="mt-3">
+            <div class="row">
+                <div class="col">
+                  <h1>Siswa KES</h1>
+                  <div class="mt-3">
+                    <table class="table">
+                    <thead>
+                        <tr>
+                        <th scope="col">No</th>
+                        <th scope="col">Nama</th>
+                        <th scope="col">Alamat</th>
+                        <th scope="col">Tanggal lahir</th>
+                        <th scope="col">Sekolah</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    <?php $k = 1;?>
+                    @foreach($siswa as $i)
+                      <tr>
+                      <th scope="row"> <?= $k++; ?></th>
+                      <td> {{$i->nama}}</td>
+                      <td>{{$i->alamat}}</td>
+                      <td> {{$i->tanggalLahir}}</td>
+                      <td>{{$i->sekolah}}</td>
+                      <td>
+                      <div class="btn-group btn-group-justified">
+                          <a type="button" href="#" class="btn btn-outline-primary btn-block">Lihat</a>
+                      </td>
+                      </tr>
+                    @endforeach
+                </tbody>
+                </table>
+                <a href="#" class="btn btn-primary mt-3" style="justify-content: center ;" >Tambah Siswa</a>
+                </div>
+                </div>
+            </div>
+        </div>
+      </div>
+      </div>
+      </div>
+      </div>
     </div>
   </body>
 @endsection
