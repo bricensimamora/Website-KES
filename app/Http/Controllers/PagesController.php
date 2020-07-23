@@ -17,6 +17,9 @@ class PagesController extends Controller
         $pengajar = Teacher::all();
         return view('istanaPintar', ['siswa' => $siswa], ['pengajar' => $pengajar]);
     }
+    public function tambahSiswa(){
+        return view('tambahSiswa');
+    }
     public function kegiatanSosial(){
         return view('kegiatanSosial');
     }

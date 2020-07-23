@@ -81,7 +81,7 @@
                     @endforeach
                 </tbody>
                 </table>
-                <a href="#" class="btn btn-primary mt-3" style="justify-content: center ;" >Tambah Siswa</a>
+                <a href="/siswa/tambah" class="btn btn-primary mt-3" style="justify-content: center ;" >Tambah Siswa</a>
                 </div>
                 </div>
             </div>

@@ -19,6 +19,7 @@ Route::get('/kegiatanSosial', 'PagesController@kegiatanSosial');
 Route::get('/pengurus', 'PagesController@pengurus');
 Route::get('/buletin', 'PagesController@buletin');
 Route::get('/volunteer', 'PagesController@volunteer');
+Route::get('/siswa/tambah', 'PagesController@tambahSiswa');
 Route::get('buletin-upload', 'BuletinController@fileUpload')->name('file.upload');
 Route::post('buletin-upload', 'BuletinController@fileUploadPost')->name('file.upload.post');
 
