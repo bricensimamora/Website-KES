@@ -7,6 +7,7 @@
             <h2 class="my-3"> Tambah Siswa</h2>
             <form action="/siswa/tambah" method="post">
                 <?= csrf_field();?>
+                
                 <div class="form-group row">
                     <label for="Nama" class="col-sm-2 col-form-label">Nama</label>
                     <div class="col-sm-10">

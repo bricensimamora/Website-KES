@@ -44,7 +44,53 @@
                     @endforeach
                 </tbody>
                 </table>
-                <a href="#" class="btn btn-primary mt-3" style="justify-content: center ;" >Tambah Pengajar</a>
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter" style="justify-content: center ;" >Tambah Guru</button>                  <!-- Modal -->
+                  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLongTitle">Tambah Guru</h5>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                        <form action="/siswa/tambah" method="post">
+                              <?= csrf_field();?>   
+                              <div class="form-group row">
+                                  <label for="Nama" class="col-sm-2 col-form-label">Nama</label>
+                                  <div class="col-sm-10">
+                                  <input type="text" class="form-control" id="Nama" name="tk_name" autofocus required>
+                                  </div>
+                              </div>
+                              <div class="form-group row">
+                                  <label for="Alamat" class="col-sm-2 col-form-label">Alamat</label>
+                                  <div class="col-sm-10">
+                                  <input type="text" class="form-control" id="Alamat" name="tk_alamat" required>
+                                  </div>
+                              </div>
+                              <div class="form-group row">
+                                  <label for="Pekerjaan" class="col-sm-2 col-form-label">Pekerjaan</label>
+                                  <div class="col-sm-10">
+                                  <input type="text" class="form-control" id="Pekerjaan" name="pekerjaan" required>
+                                  </div>
+                              </div>
+                              <div class="form-group row">
+                                  <label for="tanggalLahir" class="col-sm-2 col-form-label">Tanggal Lahir</label>
+                                  <div class="col-sm-10">
+                                  <input type="date" class="form-control" id="tanggalLahir" name="tk_tanggalLahir" required>
+                                  </div>
+                              </div>
+                              <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+                                <button type="button" class="btn btn-primary">Tambah</button>
+                              </div>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                  </div> 
+                </div>
                 </div>
             </div>
         </div>
@@ -81,12 +127,57 @@
                     @endforeach
                 </tbody>
                 </table>
-                <a href="/siswa/tambah" class="btn btn-primary mt-3" style="justify-content: center ;" >Tambah Siswa</a>
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter" style="justify-content: center ;" >Tambah Siswa</button>                  <!-- Modal -->
+                  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLongTitle">Tambah Siswa</h5>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                        <form action="/siswa/tambah" method="post">
+                              <?= csrf_field();?>   
+                              <div class="form-group row">
+                                  <label for="Nama" class="col-sm-2 col-form-label">Nama</label>
+                                  <div class="col-sm-10">
+                                  <input type="text" class="form-control" id="Nama" name="tk_name" autofocus required>
+                                  </div>
+                              </div>
+                              <div class="form-group row">
+                                  <label for="Alamat" class="col-sm-2 col-form-label">Alamat</label>
+                                  <div class="col-sm-10">
+                                  <input type="text" class="form-control" id="Alamat" name="tk_alamat" required>
+                                  </div>
+                              </div>
+                              <div class="form-group row">
+                                  <label for="Asal Sekolah" class="col-sm-2 col-form-label">Asal Sekolah</label>
+                                  <div class="col-sm-10">
+                                  <input type="text" class="form-control" id="asalSekolah" name="asalSekolah" required>
+                                  </div>
+                              </div>
+                              <div class="form-group row">
+                                  <label for="tanggalLahir" class="col-sm-2 col-form-label">Tanggal Lahir</label>
+                                  <div class="col-sm-10">
+                                  <input type="date" class="form-control" id="tanggalLahir" name="tk_tanggalLahir" required>
+                                  </div>
+                              </div>
+                              <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+                                <button type="button" class="btn btn-primary">Tambah</button>
+                              </div>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                  </div> 
                 </div>
-                </div>
+              </div>
             </div>
+          </div>
         </div>
-      </div>
       </div>
       </div>
       </div>
